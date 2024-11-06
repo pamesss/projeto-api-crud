@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/table.css">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <title>Tabela de clientes</title>
+</head>
+<body id="table-page-container">
+    <form class="hidden modal-form" id="edit-form">
+        <p class="modal-text">Cuidado! Você está editando as informações de um cliente. Prossiga com atenção!</p>
+        <input class="modal-input" type="text" value="" placeholder="Nome">
+        <input class="modal-input" type="text" value="" placeholder="Sobrenome">
+        <input class="modal-input" type="text" value="" placeholder="Telefone">
+        <input class="modal-input" type="text" value="" placeholder="CPF">
+        <input class="modal-input" type="text" value="" placeholder="Endereço">
+        <input class="modal-input" type="text" value="" placeholder="Estado">
+        <input class="modal-input" type="email" value="" placeholder="Email">
+        <input class="modal-input" type="text" value="" placeholder="Senha">
+        <input class="modal-button" type="submit" value="Salvar">
+    </form>
+    <form class="hidden modal-form" id="create-form">
+        <p class="modal-text">Cadastre os dados do novo cliente. Prossiga com atenção!</p>
+        <input class="modal-input" type="text" value="Pamella" placeholder="Nome">
+        <input class="modal-input" type="text" value="Lopes" placeholder="Sobrenome">
+        <input class="modal-input" type="text" value="(12) 3123-1231" placeholder="Telefone">
+        <input class="modal-input" type="text" value="123-123-123-12" placeholder="CPF">
+        <input class="modal-input" type="text" value="Av. Fatec, 123" placeholder="Endereço">
+        <input class="modal-input" type="text" value="São Paulo" placeholder="Estado">
+        <input class="modal-input" type="email" value="fatecsistemasparainternet@fatec.com" placeholder="Email">
+        <input class="modal-input" type="text" value="123123" placeholder="Senha">
+        <input class="modal-button" onclick="create(event)" type="button" value="Cadastrar novo usuário">
+    </form>
+    <div class="hidden" id="modal-opacity"></div>
+    <div id="table-container">
+        <div id="table-header">
+            <h1>Bem vindo(a), <span id="admin-name"></span></h1>
+            <button id="create-btn">+ Cadastrar novo cliente </button>
+        </div>
+        <div id="table-overflow">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="th-id">Id</th>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Senha</th>
+                        <th>Telefone</th>
+                        <th>Endereço</th>
+                        <th>Estado</th>
+                        <th>CPF</th>
+                        <th>Editar dados</th>
+                        <th>Deletar cadastro</th>
+                    </tr>
+                </thead>
+                <tbody id="user-rows">
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <p class="credits credits-table">Projeto desenvolvido por <a href="https://github.com/pamesss" target="_blank" rel="noopener noreferrer">@pamesss (Github)</a> para o curso <a href="https://fatecrl.edu.br/cursos/sistemas-para-internet" target="_blank" rel="noopener noreferrer">Sistemas para Internet/FATEC</a></p>
+    <script src="./login.js"></script>
+    <script src="./crud.js"></script>
+
+</body>
+</html>

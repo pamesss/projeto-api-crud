@@ -1,0 +1,59 @@
+/*PÁGINA: LOGIN*/
+#login-container { display: flex; height: 100vh; }
+#login-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    background-color: var(--background-roxo);
+    width: 50vw;
+}
+    .login-card-style h1 {
+        text-align: left;
+        font-size: 2em;
+        color: var(--texto-branco);
+    }
+    .login-card-style p {
+        margin-top: 10px;
+        text-align: left;
+        color: var(--texto-branco);
+        font-size: 0.9em;
+    }
+    .login-card-style form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 60px;
+    }
+    .login-card-style form input {
+        padding: 12px;
+        border-radius: 12px;
+        background-color: var(--background-branco);
+        border: 1px solid var(--border-branco);
+        transition: all 0.3s ease;
+    }
+    .login-card-style form button { 
+        margin-top: 20px;
+        padding: 12px;
+        border-radius: 12px;
+        border: var(--border-branco) 2px solid;
+        background-color: transparent;
+        font-weight: bold;
+        color: var(--texto-branco);
+        transition: all 0.3s ease;
+    }
+    .login-card-style form button:hover {
+        cursor: pointer;
+        background-color: var(--background-branco-75);
+        color: var(--texto);
+        transform: scale(0.995);
+        transition: all 0.3s ease;
+    }
+#login-img img{ width: 500px; }
+#login-img{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw; 
+}

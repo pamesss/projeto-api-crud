@@ -1,0 +1,217 @@
+/*PÁGINA: TABELA*/
+#table-page-container {
+    margin: 20px 50px 0px;
+    background: linear-gradient(40deg, var(--background-roxo) 40%, var(--background-rosa) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#table-container {
+    padding: 20px;
+    min-height: 85vh;
+    background-color: var(--background-branco);
+    border-radius: 24px;
+    filter: drop-shadow(0px 5px 5px #00000017);
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden; 
+}
+#table-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+#table-header button {
+    padding: 12px;
+    border-radius: 12px;
+    border: var(--border-branco) 2px solid;
+    background-color: var(--background-roxo);
+    font-weight: bold;
+    color: var(--texto-branco);
+}
+#table-header button:hover {
+    cursor: pointer;
+    background-color: var(--branco);
+    border: 2px solid var(--border-branco);
+    transition: all 0.3s ease;
+}
+#table-overflow {
+    height: 70vh;
+    overflow-y: scroll; 
+    position: relative;
+}
+table { 
+    width:100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+thead { position: sticky; }
+th { 
+    padding: 10px 10px;
+    font-size: 0.7em; 
+    color: var(--roxo-escuro);
+    background-color: var(--background-roxo-claro);
+}
+tr {
+    height: auto;
+    height: 5px;
+    border-bottom: 1px solid var(--border-branco);
+}
+tr:hover {
+    background-color: var(--roxo-claro);
+}
+td::-webkit-scrollbar { display: none; }
+td {
+    overflow-x: auto; scrollbar-width: none;
+    padding: 5px 0px;
+    text-align: center;
+    font-size: 0.7em;
+}
+.th-id {
+    width: 20px;
+}
+.data-button {
+    font-size: 0.9em;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background-color: var(--branco);
+    border: 1px solid var(--border-branco);
+}
+.data-button:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+    transition: all 0.3s ease-in-out;
+
+}
+/*MODAL*/
+.modal-form {
+    position: fixed;
+    box-sizing: border-box;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50vw;
+    padding: 50px 20px;
+    background-color: var(--background-branco);
+    border-radius: 24px;
+    border: 2px solid var(--background-roxo);
+    filter: drop-shadow(0px 0px 10px #00000017);
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    z-index: 3;
+}
+.modal-text { 
+    grid-area: 1 / 1 / 2 / 10;
+    font-size: 0.9em;
+    text-align: center;
+}
+.modal-input {
+    padding: 6px 15px;
+    border-radius: 12px;
+    border: var(--border-branco) 2px solid;
+    background-color: transparent;
+    font-size: 0.7em;
+    color: var(--texto);
+}
+.modal-button {    
+    padding: 8px;
+    border-radius: 16px;
+    border: var(--border-branco) 2px solid;
+    background-color: var(--background-roxo-claro);
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--texto);
+}
+.modal-button:hover {
+    cursor: pointer; 
+    filter: brightness(90%);
+    transition: all 0.3s ease-in-out;
+}
+#modal-opacity { 
+    position: fixed; 
+    width: 100%; 
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+
+}
+
+.modal-form input[placeholder="Nome"] { grid-area: 2 / 1 / 3 / 4; }
+.modal-form input[placeholder="Sobrenome"] { grid-area: 2 / 4 / 3 / 9; }
+.modal-form input[placeholder="Telefone"] { grid-area: 3 / 1 / 4 / 5; }
+.modal-form input[placeholder="CPF"] { grid-area: 3 / 5 / 4 / 9; }
+.modal-form input[placeholder="Endereço"] { grid-area: 4 / 1 / 5 / 6; }
+.modal-form input[placeholder="Estado"] { grid-area: 4 / 6 / 5 / 9; }
+.modal-form input[placeholder="Email"] { grid-area: 5 / 1 / 6 / 6; }
+.modal-form input[placeholder="Senha"] { grid-area: 5 / 6 / 6 / 9; }
+.modal-form input[type="submit"], .modal-form input[type="button"] { grid-area: 6 / 6 / 7 / 9; }
+
+/* Tablets */
+@media (max-width: 768px) {
+    #table-page-container {
+        margin: 15px;
+    }
+    #table-header button, .data-button {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+    th, td {
+        font-size: 0.6em;
+    }
+    .modal-form {
+        width: 70vw;
+        padding: 30px 15px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .modal-form input[placeholder="Nome"] { grid-area: 2 / 1 / 3 / 3; }
+    .modal-form input[placeholder="Sobrenome"] { grid-area: 2 / 3 / 3 / 5; }
+    .modal-form input[placeholder="Telefone"] { grid-area: 3 / 1 / 4 / 3; }
+    .modal-form input[placeholder="CPF"] { grid-area: 3 / 3 / 4 / 5; }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    #table-page-container {
+        margin: 10px;
+    }
+    #table-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    #table-header button, .data-button {
+        font-size: 0.7em;
+        padding: 6px;
+    }
+    th, td {
+        font-size: 0.5em;
+    }
+    .modal-form {
+        width: 90vw;
+        padding: 20px;
+        grid-template-columns: 1fr;
+    }
+    .modal-form input[placeholder="Nome"],
+    .modal-form input[placeholder="Sobrenome"],
+    .modal-form input[placeholder="Telefone"],
+    .modal-form input[placeholder="CPF"],
+    .modal-form input[placeholder="Endereço"],
+    .modal-form input[placeholder="Estado"],
+    .modal-form input[placeholder="Email"],
+    .modal-form input[placeholder="Senha"] {
+        grid-area: auto;
+        width: 100%;
+    }
+    .modal-form input[type="submit"],
+    .modal-form input[type="button"] {
+        width: 100%;
+        grid-area: auto;
+    }
+}

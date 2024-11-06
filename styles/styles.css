@@ -1,0 +1,47 @@
+/*fonte do projeto*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lexend:wght@100..900&display=swap');
+/*paleta de cores*/
+:root {
+    --background-roxo: #541D94;    
+    --background-rosa: #800687;
+    --background-roxo-claro: #F2EFF3;
+    --background-branco: #FEFCFE;
+    --background-branco-75: hsla(300, 50%, 99%, 0.650);
+    --border-branco: #DBD8E0;
+    --texto-branco: rgba(255, 255, 255, 0.95);
+    --branco: #F0F0F3;
+    --cinza: #DBD8E0;
+    --texto: #211F26;
+}
+/*reset css*/
+* { 
+    padding: 0; margin: 0;
+    box-sizing: content-box;
+    border: 0; border-radius: 0;
+    font-family: 'Lexend','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*toggle class*/
+.hidden { display: none !important; }
+
+/*RODAPÉ*/
+.credits {
+    position: absolute;
+    bottom: 0;
+    padding: 16px;
+    font-size: 0.7em;
+    color: var(--texto-branco);
+}
+.credits-table {
+    left: 50%;    
+    transform: translateX(-50%);
+    padding: 9px !important;
+}
+.credits a {
+    color: var(--texto-branco);
+    text-decoration: none;
+    opacity: 70%;
+}
+.credits a:hover {
+    transition: all 0.3s ease-in-out;
+    opacity: 100%;
+}

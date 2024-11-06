@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <title>Painel de Login do Administrador</title>
+</head>
+
+<body id="login-container">
+    <div id="login-card-container">
+        <div class="login-card-style">
+            <h1>FAÇA LOGIN NA SUA CONTA</h1>
+            <p>Insira suas credenciais para acessar o painel.</p>
+            <form id="login-form" method="get">
+                <input type="text" name="admin-name" id="admin-name" placeholder="Nome de usuário" required>
+                <input type="password" name="admin-password" id="admin-password" placeholder="Senha de Acesso" required>
+                <button type="submit">ENTRAR</button>
+            </form>
+        </div>
+        <p class="credits">Projeto desenvolvido por <a href="https://github.com/pamesss" target="_blank" rel="noopener noreferrer">@pamesss (Github)</a> para o curso <a href="https://fatecrl.edu.br/cursos/sistemas-para-internet" target="_blank" rel="noopener noreferrer">Sistemas para Internet/FATEC</a></p>
+    </div>
+    <div id="login-img">
+        <img src="./login-screen-card.jpg" alt="">
+    </div>
+    
+    <script src="./login.js" defer></script>
+    <script src="./crud.js"></script>
+</body>
+</html>
